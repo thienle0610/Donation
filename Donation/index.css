@@ -1,0 +1,64 @@
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    color: #383838;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    line-height: 1.5;
+}
+/* layout */
+body{
+    max-width: 100%;
+    background-image: url("foodbankbg.png");
+    box-shadow: lightgreen 0px 0px 50px;}
+	
+.img-container
+{
+	text-align: center;
+	margin-bottom: 10px;
+	
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 10px;
+  }
+
+.navbar ul li
+{
+    margin: 3px 36px;
+}
+
+.navbar ul li .btn-danger:hover
+{
+    background: greenyellow;
+}
+
+.embed-responsive
+{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.responsive-iframe
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}

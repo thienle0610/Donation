@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CQST Donation</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="content">
+        <header>
+            <div class="img-container">
+                <img src="logo.png"  class="center" alt="logo"/>
+            </div>
+            <nav class="navbar navbar-inverse">
+                      <div class="container-fluid">
+                      <ul class="nav navbar-nav">
+                          <li><a href="DONATE.html" class="btn-danger">DONATE</a></li>
+                          <li class="active"><a href="home.html"><i class="fa fa-home"></i>Home</a></li>
+                          <li><a href="news.html">News</a></li>
+                          <li><a href="event.html">Events</a></li>
+                          <li><a href="localdonations.html">Local Donations</a></li>
+                          <li><a href="aboutus.html">About Us</a></li>
+                      </ul>
+                      </div>
+            </nav>
+        </header>
+        <section>
+            <p>Millions of people living in parts of Africa lack the basic necessities of life.</p>
+            <p>An estimated 220 million people lack adequate nutrition. Approximately 1.6 million Africans died of malaria, tuberculosis and HIV-related illnesses in 2015.</p> 
+            <p>Globally, 50% of children under five who die of pneumonia, diarrhea, measles, HIV, tuberculosis and malaria are in Africa, according to the World Health Organisation (WHO).</p>
+        </section>
+
+        <div>
+            <form class="form-horizontal" method="POST" onsubmit="">
+                <h4 class="col-sm-offset-2">Donation Form</h4>
+                <div class="form-group">
+                <label class="control-label col-sm-2" for="firstname">*First Name:</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" id="fn"  required>
+                </div>
+                </div>
+                <div class="form-group">
+                <label class="control-label col-sm-2" for="lastname">*Last Name:</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" id="ln"  required>
+                </div>
+                </div>
+                <div class="form-group">
+                <label class="control-label col-sm-2" for="phonenumber">Phone Number:</label>
+                <div class="col-sm-4">
+                <input type="tel" class="form-control" id="pn" placeholder="(000)-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                </div>
+                </div>
+                <div class="form-group">
+                <label class="control-label col-sm-2" for="email">*Email:</label>
+                <div class="col-sm-4">
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                </div>
+                </div>
+                <div class="form-group">
+                <label class="control-label col-sm-2" for="optionfordonation">Donate:</label>
+                <div class="col-sm-4">
+                <div class="radio">
+                <label><input type="radio" name="optradio" >$50</label>
+                </div>
+                <div class="radio">
+                <label><input type="radio" name="optradio" >$100</label>
+                </div>
+                <div class="radio">
+                <label><input type="radio" name="optradio" >$150</label>
+                </div>
+                <div class="radio">
+                <label><input type="radio" name="optradio" >$200</label>
+                </div>
+                <div class="radio">
+                <label><input type="radio" name="optradio" > Other Amount</label>
+                <input type="number" id="amount" name="amount" style="max-width: 40;" placeholder="$" class="form-control"/>
+                </div>
+                </div>
+                </div>
+                <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input id="submit" type="submit" class="btn btn-info" onclick="store()">  
+                </div>
+                </div>
+            </form>
+        </div>
+            
+        <aside>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/GyJPa9OpE2Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <span><p align=center>Current situation in Africa</p></span>
+<br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/MEb_epsuLqA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <span><p align=center>As can be seen, we can buy so many thing with a dollar</p></span>
+            <br>
+            <p>Thank you for sharing your love to deliver food, medical care and hope to our most vulnerable neighbors.</p>
+            <p>Your gift will be used to respond to the greatest needs in some of the world’s most fragile communities. God bless you.</p>
+            <p>Please be sure to notice the checkbox below that handles your donation's processing fee. Thank you!</p>
+        </aside>
+        <footer>
+            <p align=center>CQST &#8226; 243 Belde Drive, Charlotte NC 28F20 &#8226; 123-456-7890</p>
+          <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="index.html"> Donation</a>
+          </div>
+       </footer>
+    </div>
+</body>
+</html>
