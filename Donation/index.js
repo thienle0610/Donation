@@ -26,6 +26,7 @@ function store(){
         localStorage.setItem('phoneno', phoneno.value);
         localStorage.setItem('email', email.value);
         alert('Your donation is successful! Thank you!');
+        window.open("home.html");
     }
 }
 
