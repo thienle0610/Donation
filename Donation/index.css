@@ -10,7 +10,7 @@ body
     color: #383838;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 34px;
     line-height: 1.5;
 }
 /* layout */
@@ -35,7 +35,7 @@ body{
 
 .navbar ul li
 {
-    margin: 3px 36px;
+    margin: 3px 30px;
 }
 
 .navbar ul li .btn-danger:hover
@@ -61,4 +61,87 @@ body{
     width: 100%;
     height: 100%;
     border: none;
+}
+
+div.form 
+{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    align-items: center;
+}
+
+.form h4
+{
+    color: red;
+}
+
+.fullname {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+.fullname > div {
+    padding: 0 5px;
+  }
+
+.mailandphoneno {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.mailandphoneno > div {
+    padding: 0 5px;
+}
+
+.clear
+{
+    margin-bottom: 10px;
+}
+
+.addressandstate {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.addressandstate > div {
+    padding: 0 5px;
+}
+
+.citydonationtype {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.citydonationtype > div {
+    padding: 0 5px;
+}
+
+select {
+    width: 150px;
+    margin: 10px;
+}
+select:focus {
+    min-width: 150px;
+    width: auto;
+}
+/* input[type=tel], input[type=email], input[type=text]
+{
+    
+    width: 460px;
+} */
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+input[type=submit]:hover {
+    background-color: #45a049;
 }
