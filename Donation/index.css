@@ -192,3 +192,22 @@ footer
     padding: 20px;
 }
 
+
+/* news box - by cuong */
+.box{
+    width: fit-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.box .box-image{
+    float: left;
+    display: inline;
+    width: auto;
+    height: auto;
+    position: relative;
+}
+.box .box-body a {
+	text-decoration:none;
+	text-transform:uppercase;
+}
