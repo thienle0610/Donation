@@ -274,6 +274,22 @@ section > .bank >p
 }
 
 
+
+.row {
+  float: left;
+  padding: 30px;
+  border-radius: 50%;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
 .canadahelps >  img {
   display: block;
   margin-left: auto;
