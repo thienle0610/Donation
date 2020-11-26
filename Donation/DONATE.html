@@ -10,15 +10,236 @@
     <!-- bootstrap and fontawesome CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- first name validation -->
+    <script>
+        function fnameValidation(){
+            var regName = /^[a-zA-Z]+$/;
+            var fname = document.getElementById('fn').value;
+            if(!regName.test(fname)){
+                alert('Please enter your first name in alphabet letters.');
+                document.getElementById('fn').focus();
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+
+    <!-- last name validation -->
+    <script>
+    function lnameValidation(){
+        var regName = /^[a-zA-Z]+$/;
+        var lname = document.getElementById('ln').value;
+        if(!regName.test(lname)){
+            alert('Please enter your last name in alphabet letters.');
+            document.getElementById('ln').focus();
+            return false;
+        }else{
+            return true;
+        }
+    }
+    </script>
+
+    <!-- phone number validation -->
+    <script>
+    function phoneValidation(){
+        var regName = /^\+?1?\s*?\(?\d{3}(?:\)|[-|\s])?\s*?\d{3}[-|\s]?\d{4}$/;
+        var phoneno = document.getElementById('pn').value;
+        if(!regName.test(phoneno)){
+            alert('Please enter your correct phone number.');
+            document.getElementById('pn').focus();
+            return false;
+        }else{
+            return true;
+        }
+    }
+    </script>
+
+    <!-- email validation -->
+    <script>
+    function emailValidation()
+    {
+        var regName = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        var email = document.getElementById('email').value;
+        if(!regName.test(email)){
+            alert('Please enter your email in the correct form.');
+            document.getElementById('email').focus();
+            return false;
+        }else{
+            return true;
+        }
+    }    
+    </script>
+
+    <!-- address validation -->
+    <script>
+    function addressValidation()
+    {
+        var regName = /^\d{1,5}\s(\b\w*\b\s){1,2}\w*/;
+        var address = document.getElementById('address').value;
+        if(!regName.test(address)){
+            alert('Please enter your address in the correct form.');
+            document.getElementById('address').focus();
+            return false;
+        }else{
+            return true;
+        }
+    }    
+    </script>
+
+    <!-- city validation -->
+    <script>
+        function cityValidation() 
+        {  
+            select = document.getElementById('select'); 
+            if (select.value == 0) {
+            
+            alert('Please choose your city');
+            document.getElementById('select').focus();
+            return false;
+            }
+            else{
+            return true;
+            }
+        } 
+    </script>
+
+    <!-- state validation -->
+    <script>
+        function stateValidation(){
+            var regName = /^[a-zA-Z]+$/;
+            var state = document.getElementById('state').value;
+            if(!regName.test(state)){
+                alert('Please enter your state.');
+                document.getElementById('state').focus();
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+
+    <!-- donation type validation -->
+    <script>
+        function dotypeValidation(){
+                select = document.getElementById('select2'); 
+                if (select.value == 0) {
+                
+                alert('Please choose the donation type');
+                document.getElementById('select2').focus();
+                return false;
+                }
+                else{
+                return true;
+                }
+        }
+    </script>
+
+    <script> 
+        function dooptValidation() { 
+                var value1 = document.getElementById('optradio1').checked;
+                var value2 = document.getElementById('optradio2').checked;
+                var value3 = document.getElementById('optradio3').checked;
+                var value4 = document.getElementById('optradio4').checked;
+                var value5 = document.getElementById('optradio5').checked;
+                
+                if(value1 == false && value2 == false && value3 ==false && value4 ==false && value5 == false){
+                alert('You need to select the amount of money you want to donate.');
+                return false;
+                }
+                else if(value5 == true)
+                {
+                    var x = document.getElementById('amount').value;
+                    document.getElementById('result').innerHTML = "You donate: $" + x;
+                }
+                else{
+                return true;
+                }
+                }
+                
+        
+    </script> 
+
+    <!-- payment method validation -->
+    <script>
+        function payValidation(){
+                var visa = document.getElementById('visa').checked;
+                var mastercard = document.getElementById('mastercard').checked;
+                var paypal = document.getElementById('paypal').checked;
+                
+                if(visa == false && mastercard == false && paypal ==false){
+                alert('You need to select one of the payment method!');
+                return false;
+                }
+                else{
+                return true;
+                }
+                }
     
+    </script>
+
+    <!-- card number validation -->
+    <script>
+        function cardValidation(){
+        var regName = /^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$/;;
+        var card = document.getElementById('card').value;
+        if(!regName.test(card)){
+            alert('Please enter your correct bank account number.');
+            document.getElementById('card').focus();
+            return false;
+        }else{
+            return true;
+        }
+    }
+    </script>
+    
+    <!-- we only validate the date that is in the future -->
+    <script>
+         function checkDateofExpire() {
+            var selectedText = document.getElementById('datepicker').value;
+            var selectedDate = new Date(selectedText);
+            var now = new Date();
+            if (selectedDate < now) {
+                alert("Date must be in the future");
+            }
+            else if (selectedText == 0)
+            {
+                alert('Please enter the expire date of your card.');
+                document.getElementById('datepicker').focus();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+}
+    </script>
+
+    <!-- CVC validation -->
+    <script>
+        function cvcValidation()
+        {
+            var regName = /^[0-9]{3,4}$/;
+            var cvc = document.getElementById('cvc').value;
+            if(!regName.test(cvc)){
+                alert('Please enter your CVC number.');
+                document.getElementById('cvc').focus();
+                return false;
+            }else{
+                return true;
+            }
+        }
+    </script>
+
 </head>
 <body>
     <div class="content">
         <header>
             <div class="img-container">
-                <img src="logo.png"  class="center" alt="logo"/>
+                <img src="logo.png" style="border-radius: 50%" class="center" alt="logo"/>
             </div>
             <nav class="navbar navbar-inverse">
                       <div class="container-fluid">
@@ -35,20 +256,22 @@
         </header>
 
          <div class="form">
-            <form class="form-horizontal" method="POST" onsubmit="">
-                <h4 class="text-center py-3">Donation Form</h4> 
+            <form class="form-horizontal" method="POST" onsubmit="" action="">
+                <h3 class="text-center py-3"><strong>Donation Form</strong></h3> 
+                <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                <h2 class="py-3">Information</h2>
                 <!-- Full name -->
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-6">
-                            <label class="control-label" for="firstname">*First Name:</label>
-                            <input type="text" class="form-control" id="fn"  required>
+                            <label class="control-label" for="fn">*First Name:</label>
+                            <input type="text" class="form-control" id="fn">
                             <div class="clear"></div>
                         </div>
                     
                         <div class="col-md-6">
                             <label class="control-label" for="lastname">*Last Name:</label>
-                            <input type="text" class="form-control" id="ln"  required>
+                            <input type="text" class="form-control" id="ln">
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -59,13 +282,13 @@
                     <div class="form-row">
                         <div class="col-md-6">
                             <label class="control-label" for="phonenumber">Phone Number:</label>
-                            <input type="tel" class="form-control" id="pn" placeholder="(000)-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                            <input type="tel" class="form-control" id="pn" placeholder="(000)-000-0000" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                             <div class="clear"></div>
                         </div>
                         
                         <div class="col-md-6">
                             <label class="control-label" for="email">*Email:</label>              
-                            <input type="email" class="form-control" id="email" placeholder="id@example.com" required>
+                            <input type="email" class="form-control" id="email" placeholder="id@example.com" >
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -74,42 +297,41 @@
                 <!-- Address & State -->
                  <div class="form-group">
                     <div class="form-row">
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <label class="control-label" for="address">*Address:</label>
-                            <input type="text" class="form-control" id="address"  required>
-                            <div class="clear"></div>
-                        </div>
-    
-                        <div class="col-md-6">
-                            <label class="control-label" for="state">State:</label>
-                            <input type="text" class="form-control" id="state"  required>
+                            <input type="text" class="form-control" id="address" placeholder="1234 Main Street">
                             <div class="clear"></div>
                         </div>
                     </div>
                 </div> 
                 
-
                 <!-- City and Donation Type -->
                 <div class="form-group">
                     <div class="form-row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <label class="control-label" for="city">City:</label>
                             <div id="opt">
-                                    <select class="form-control">
+                                    <select class="form-control" name="city" id="select">
+                                        <option value="0">Choose a city</option>
                                         <option value="1">Canada</option>
                                         <option value="2">USA</option>
-                                        <option value="3">Australia</option>
                                     </select>
                             </div>
                             
                             <div class="clear"></div>
                         </div>
-                        
+
+                        <div class="col-md-4">
+                            <label class="control-label" for="state">State:</label>
+                            <input type="text" class="form-control" id="state"  required>
+                            <div class="clear"></div>
+                        </div>
                             
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <label class="control-label" for="dotype">Donation type:</label>
                             <div id="opt">
-                                    <select class="form-control">
+                                    <select class="form-control" name="dotype" id="select2" required>
+                                        <option value="0">Choose the donation type</option>
                                         <option value="1">One-time</option>
                                         <option value="2">Monthly</option>
                                     </select>
@@ -120,48 +342,75 @@
                     </div>
                 </div>
                 
+                <!-- Billing Information -->
+                <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+                <h2 class="py-3">Billing Information</h2>
 
+                <!-- Donate Options and Message -->
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-6">
                             <label class="control-label" for="optionfordonation">Donate:</label>
                             <div class="radio">
-                            <label><input type="radio" name="optradio" >$50</label>
+                            <label><input type="radio" name="optradio1" id="optradio1"> $50</label>
                             </div>
                             <div class="radio">
-                            <label><input type="radio" name="optradio" >$100</label>
+                            <label><input type="radio" name="optradio2" id="optradio2"> $100</label>
                             </div>
                             <div class="radio">
-                            <label><input type="radio" name="optradio" >$150</label>
+                            <label><input type="radio" name="optradio3" id="optradio3"> $150</label>
                             </div>
                             <div class="radio">
-                            <label><input type="radio" name="optradio" >$200</label>
+                            <label><input type="radio" name="optradio4" id="optradio4"> $200</label>
                             </div>
                             <div class="radio">
-                            <label><input type="radio" name="optradio" > Other Amount</label>
+                            <label><input type="radio" name="optradio5" id="optradio5"> Other Amount:</label>
+                            <div class="clear"></div>
                             <input type="number" id="amount" name="amount" style="max-width: 40;" placeholder="$" class="form-control"/>
                             </div>
-
                             <div class="clear"></div>
+
+                            <br>
+                            <div id="result" style="text-align: center; font-size: 500;"></div>
+                            <br>
+
+                            <label class="control-label" for="note">Message:</label>
+                            <div class="note">
+                                <textarea name="note" id="note" style="min-width: 100%;"></textarea>
+                            </div>
                         </div>
 
+                        <!-- Pay method contains card number, expire date and CVC -->
                         <div class="col-md-6">
+                            <label class="control-label" for="paymethod">Pay method: </label>              
+                            <div class="radio">
+                                <label><input type="radio" name="optra" id="visa"><i class="fab fa-cc-visa fa-2x"></i>  Visa</label>
+                                </div>
+                                <div class="radio">
+                                <label><input type="radio" name="optra" id="mastercard"><i class="fab fa-cc-mastercard fa-2x"></i>  Mastercard</label>
+                                </div>
+                                <div class="radio">
+                                <label><input type="radio" name="optra" id="paypal"><i class="fab fa-cc-paypal fa-2x"></i>  Paypal</label>
+                                </div>
+                            <div class="clear"></div>
+                            
                             <label class="control-label" for="card">Card Number:</label>              
-                            <input type="number" class="form-control" id="card" placeholder="Enter your card number" required>
+                            <input type="text" class="form-control" id="card" placeholder="xxxx-xxxx-xxxx-xxxx">
                             <div class="clear"></div>
                             <label class="control-label" for="exdate">Expire date:</label>              
-                            <input type="date" class="form-control" id="exdate" placeholder="mm/yy" required>
+                            <input id="datepicker" onchange="checkDateofExpire()" class="form-control" required type="date" data-date-format="yyyy-mm-dd" >
                             <div class="clear"></div>
                             <label class="control-label" for="cvc">CVC:</label>              
-                            <input type="cvc" class="form-control" id="cvc" placeholder="3 or 4 digits" required>
+                            <input type="cvc" class="form-control" maxlength="4" minlength="3" id="cvc" placeholder="3 or 4 digits">
                             <div class="clear"></div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Submit button that needs to check validation before the action in onSubmit() -->
                 <div class="form-group">
                 <div class="bttn">
-                    <input id="submit" type="submit" class="btn btn-info" onclick="store()">  
+                    <input id="submit" type="submit" class="btn btn-info" onclick="return !!(fnameValidation() & lnameValidation() & phoneValidation() & emailValidation() & addressValidation() & cityValidation() & stateValidation() & dotypeValidation() & dooptValidation() & payValidation() & cardValidation() & checkDateofExpire() &cvcValidation())">  
                 </div>
                 </div>
             </form>
