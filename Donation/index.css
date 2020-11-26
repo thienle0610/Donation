@@ -22,6 +22,8 @@ body
 body{
     max-width: 100%;
     background-image: url("foodbankbg.png");
+    background-position: center center;
+    background-size: cover;
 }
 	
 .img-container
