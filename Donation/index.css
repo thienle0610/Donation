@@ -194,7 +194,7 @@ footer
 /* localdonation*/
 .bank
 {   
-    margin:50px;
+    margin: 20px 10px;
 }
 
 .bank>h3
@@ -215,11 +215,11 @@ footer
 }
 .canadahelps
 {   
-    margin:50px;
+    margin:20px 10px;
 }
 .canadahelps>h3
 {
-    padding:20px;
+    padding:20px 20px;
     background-color:  rgb(254, 204, 30);
     color: white;
     font-weight: 1000;
@@ -253,7 +253,7 @@ section > .bank >p
 /* About us */
 .wwa>section
 {   
-    margin:50px;
+    margin:20px 10px;
 }
 
 .wwa>section>h1
@@ -266,7 +266,7 @@ section > .bank >p
 
 .wwa>section>p
 {
-    padding:20px;
+    padding:20px 20px;
     margin: auto;
     text-align: left;
     line-height: 2.25;
@@ -274,29 +274,6 @@ section > .bank >p
 }
 
 
-.column {
-  float: left;
-  width: 25%;
-  padding: 10px;
-  border-radius: 50%;
-}
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-.column1 {
-  float: left;
-  padding: 30px;
-  border-radius: 50%;
-}
-
-
-.row1::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 .canadahelps >  img {
   display: block;
   margin-left: auto;
