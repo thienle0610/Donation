@@ -22,6 +22,8 @@ body
 body{
     max-width: 100%;
     background-image: url("foodbankbg.png");
+    background-position: center center;
+    background-size: cover;
 }
 	
 .img-container
@@ -146,51 +148,15 @@ div.form
     align-items: center;
 }
 
-.form h4
+.form h3
 {
-    color: red;
+    color: #db3535;
 }
-
-/* .fullname {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-
-.fullname > div {
-    padding: 0 5px;
-  }
-
-.mailandphoneno {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.mailandphoneno > div {
-    padding: 0 5px;
-} */
 
 .clear
 {
     margin-bottom: 10px;
 }
-
-/* .addressandstate {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.addressandstate > div {
-    padding: 0 5px;
-}
-
-.citydonationtype {
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.citydonationtype > div {
-    padding: 0 5px;
-} */
 
 select {
     width: 150px;
@@ -200,11 +166,6 @@ select:focus {
     min-width: 150px;
     width: auto;
 }
-/* input[type=tel], input[type=email], input[type=text]
-{
-    
-    width: 460px;
-} */
 
 input[type=submit] {
     width: 100%;
@@ -341,3 +302,4 @@ section > .bank >p
   margin-left: auto;
   margin-right: auto;
 }
+
