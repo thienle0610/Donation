@@ -295,55 +295,57 @@ section > .bank >p
   margin-left: auto;
   margin-right: auto;
 }
-<<<<<<< HEAD
+
 /*Event */
-.valuevillage > img {
+.eventHead
+{
+    color: rgb(254, 204, 30);
+     background-image: url("unnamed.jpg");
+     width:900px; 
+     height:300px; 
+     padding: 50px;
+     text-align: left;
+     vertical-align: middle;
+    font-size: 100px;
+    font-weight: bold;
+    margin: 50px;
+}
+
+.events > img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-.valuevillage>.time{
+.events>.time{
     text-decoration: underline rgb(254, 0, 0); 
-    padding-left: 50px;   
+    padding-left: 20px;   
     font-size: 20px;
 }
-.valuevillage
+.events
 {   
     margin:50px;
 }
-.valuevillage>h3
+.events>h3
 {
     padding:20px 20px;
     background-color:  rgb(254, 204, 30);
     color: white;
     font-weight: 1000;
 }
-.valuevillage>p
+.events>p
 {
     padding:20px;
     margin: auto;
     text-align: left;
     line-height: 2.25;
     font-size: 16px;
-=======
-
-
-/* news box - by cuong */
-.box{
-    width: fit-content;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    position: relative;
 }
-.box .box-image{
-    float: left;
-    display: inline;
-    width: auto;
-    height: auto;
-    position: relative;
-}
-.box .box-body a {
-	text-decoration:none;
-	text-transform:uppercase;
->>>>>>> dc4cdc94646fb1022c7872ecb9cdc783b531f9f7
+
+.notes
+{
+    font-family: myNewFont;
+    margin:50px;
+    padding:50px;
+    text-align: left;
+    background-color: rgb(254, 204, 30);
 }
