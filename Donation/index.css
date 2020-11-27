@@ -300,14 +300,14 @@ section > .bank >p
 .eventHead
 {
     color: rgb(254, 204, 30);
-     background-image: url("unnamed.jpg");
+     /* background-image: url("unnamed.jpg");
      width:900px; 
      height:300px; 
-     padding: 50px;
-     text-align: left;
-     vertical-align: middle;
+     padding: 50px; */
+    /* text-align: left;
+    vertical-align: middle;
     font-size: 100px;
-    font-weight: bold;
+    font-weight: lighter; */
     margin: 50px;
 }
 
