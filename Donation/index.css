@@ -339,6 +339,41 @@ section > .bank >p
     text-align: left;
     line-height: 2.25;
     font-size: 16px;
+
+}
+
+
+/* news box - by cuong */
+div#news > h2
+{
+    padding:20px 20px;
+    background-color:  rgb(254, 204, 30);
+    color: white;
+    font-weight: 1000;
+    margin: 30px 0;
+}
+
+.box{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+} 
+
+.box > .img-container
+{
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    align-items: center;
+}
+
+.clearFix
+{
+    clear: both;
+    content: "";
+    display: block;
+}
+
 }
 
 .notes
@@ -349,3 +384,4 @@ section > .bank >p
     text-align: left;
     background-color: rgb(254, 204, 30);
 }
+
