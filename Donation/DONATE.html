@@ -148,7 +148,7 @@
         </header>
 
          <div class="form">
-            <form class="form-horizontal" method="POST" onsubmit="" action="">
+            <form class="form-horizontal" method="POST" onsubmit="alert('Thank you for your donation.');" action="">
                 <h3 class="text-center py-3"><strong>Donation Form</strong></h3> 
                 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
                 <h2 class="py-3">Information</h2>
@@ -304,7 +304,7 @@
                 <!-- Submit button that needs to check validation before the action in onSubmit() -->
                 <div class="form-group">
                 <div class="bttn">
-                    <input id="submit" type="submit" class="btn btn-info" onclick="return (checkValidation())"> 
+                    <input id="submit" type="submit" class="btn btn-info" onclick="return (checkValidation() && store())"> 
                 </div>
                 <br>
                 
