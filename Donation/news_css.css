@@ -1,0 +1,53 @@
+.box {
+	width:627px;
+	float:left;
+	display:inline;
+	padding:11px;
+	margin:0 10px 11px 0;
+	position:relative;
+}
+.box .box-image {
+	float:left;
+	display:inline;
+	width:119px;
+	height:85px;
+	margin-right:11px;
+	position:relative;
+}
+.box .box-body .posted {
+	font-size:10px;
+	color:#7f7f7f;
+	text-transform:uppercase;
+}
+.box h2 {
+	font-size:21px;
+	line-height:24px;
+	font-weight:normal;
+	font-family:"Times New Roman", Arial, sans-serif;
+}
+.box h2.title {
+	margin-bottom:5px;
+}
+.box .box-body .text {
+	font-size:13px;
+	line-height:17px;
+	color:#c6be95;
+}
+.box .box-body a {
+	text-decoration:underline;
+	text-transform:uppercase;
+}
+.box .box-body a:hover {
+	text-decoration:none;
+}
+.box .box-body .continue {
+	font-size:9px;
+	color:#ffa200;
+}
+.box .box-body .comments {
+	font-size:9px;
+	color:#fff;
+	background:url(images/ico-comments.gif) no-repeat right 2px;
+	padding-right:12px;
+	margin-right:5px;
+}
