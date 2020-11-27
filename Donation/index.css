@@ -22,6 +22,8 @@ body
 body{
     max-width: 100%;
     background-image: url("foodbankbg.png");
+    background-position: center center;
+    background-size: cover;
 }
 	
 .img-container
@@ -189,4 +191,127 @@ footer
     margin: 0;
     padding: 20px;
 }
+/* localdonation*/
+.bank
+{   
+    margin: 20px 10px;
+}
 
+.bank>h3
+{
+    padding:20px 20px;
+    background-color:  rgb(254, 204, 30);
+    color: white;
+    font-weight: 1000;
+}
+
+.bank>.foodbank>p
+{
+    padding:20px;
+    margin: auto;
+    text-align: left;
+    line-height: 2.25;
+    font-size: 16px;
+}
+.canadahelps
+{   
+    margin:20px 10px;
+}
+.canadahelps>h3
+{
+    padding:20px 20px;
+    background-color:  rgb(254, 204, 30);
+    color: white;
+    font-weight: 1000;
+}
+
+.canadahelps>p
+{
+
+    padding:20px;
+    margin: auto;
+    text-align: left;
+    line-height: 2.25;
+    font-size: 16px;
+}
+section > .bank >p
+{
+    padding:20px;
+    margin: auto;
+    text-align: left;
+    line-height: 2.25;
+    font-size: 16px;
+}
+section > .bank >p
+{
+    padding:20px;
+    margin: auto;
+    text-align: left;
+    line-height: 2.25;
+    font-size: 16px;
+}
+/* About us */
+.wwa>section
+{   
+    margin:20px 10px;
+}
+
+.wwa>section>h1
+{
+    padding:20px 20px;
+    background-color:  rgb(254, 204, 30);
+    color: white;
+    font-weight: 1000;
+}
+
+.wwa>section>p
+{
+    padding:20px 20px;
+    margin: auto;
+    text-align: left;
+    line-height: 2.25;
+    font-size: 16px;
+}
+
+
+
+.row {
+  float: left;
+  padding: 30px;
+  border-radius: 50%;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+.canadahelps >  img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* news box - by cuong */
+.box{
+    width: fit-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.box .box-image{
+    float: left;
+    display: inline;
+    width: auto;
+    height: auto;
+    position: relative;
+}
+.box .box-body a {
+	text-decoration:none;
+	text-transform:uppercase;
+}
