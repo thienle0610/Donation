@@ -222,7 +222,7 @@ footer
 {   
     margin:20px 10px;
 }
-.canadahelps>h3
+.canadahelps >h3
 {
     padding:20px 20px;
     background-color:  rgb(254, 204, 30);
@@ -295,11 +295,11 @@ section > .bank >p
 
 
 
-.canadahelps >  img {
+/* .canadahelps >  img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 /*Event */
 .eventHead
