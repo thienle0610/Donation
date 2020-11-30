@@ -130,6 +130,9 @@
 <body>
     <div class="content">
         <header>
+            <section class="adminButtonSection">
+                <button onclick="window.location.href='login.html'" class="btn"><i class="fas fa-user"></i>&nbsp; Admin</button>
+            </section>
             <div class="img-container">
                 <img src="logo.png" style="border-radius: 50%" class="center" alt="logo"/>
             </div>
@@ -160,7 +163,6 @@
                             <input type="text" class="form-control" id="fn">
                             <div class="clear"></div>
                         </div>
-                    
                         <div class="col-md-6">
                             <label class="control-label" for="lastname">*Last Name:</label>
                             <input type="text" class="form-control" id="ln">
@@ -201,9 +203,9 @@
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-4">
-                            <label class="control-label" for="city">City:</label>
+                            <label class="control-label" for="city">Country:</label>
                             <div id="opt">
-                                    <select class="form-control" name="city" id="select">
+                                    <select class="form-control" name="city" id="city">
                                         
                                         <option value="1" id="op1" default>Canada</option>
                                         <option value="2" id="op2">USA</option>
@@ -222,7 +224,7 @@
                         <div class="col-md-4">
                             <label class="control-label" for="dotype">Donation type:</label>
                             <div id="opt">
-                                    <select class="form-control" name="dotype" id="select2">
+                                    <select class="form-control" name="dotype" id="dotype">
                             
                                         <option value="1" id="opt1" default>One-time</option>
                                         <option value="2" id="opt2">Monthly</option>
@@ -242,7 +244,7 @@
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-6">
-                            <label class="control-label" for="optionfordonation">Donate:</label>
+                            <label class="control-label" for="optionfordonation" id=>Donate:</label>
                             <div class="radio">
                             <label><input type="radio" name="optradio1" id="optradio1"> $50</label>
                             </div>
@@ -295,7 +297,7 @@
                             <div class="clear"></div>
 
                             <label class="control-label" for="exdate">Expire date:</label>              
-                            <input id="datepicker" onchange="checkDateofExpire()" class="form-control" type="date" data-date-format="yyyy-mm-dd" >
+                            <input id="datepicker" onchange="" class="form-control" type="date" data-date-format="yyyy-mm-dd" >
                             <div class="clear"></div>
                         </div>
                     </div>
