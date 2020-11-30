@@ -130,6 +130,9 @@
 <body>
     <div class="content">
         <header>
+            <section class="adminButtonSection">
+                <button onclick="window.location.href='login.html'" class="btn"><i class="fas fa-user"></i>&nbsp; Admin</button>
+            </section>
             <div class="img-container">
                 <img src="logo.png" style="border-radius: 50%" class="center" alt="logo"/>
             </div>
@@ -137,7 +140,7 @@
                       <div class="container-fluid">
                       <ul class="nav navbar-nav">
                           <li><a href="DONATE.html" class="btn-danger">DONATE</a></li>
-                          <li class="active"><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+                          <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
                           <li><a href="news.html">News</a></li>
                           <li><a href="event.html">Events</a></li>
                           <li><a href="localdonations.html">Local Donations</a></li>
@@ -148,7 +151,7 @@
         </header>
 
          <div class="form">
-            <form class="form-horizontal" method="POST" onsubmit="" action="">
+            <form class="form-horizontal" method="POST" onsubmit="alert('Thank you for your donation.');" action="">
                 <h3 class="text-center py-3"><strong>Donation Form</strong></h3> 
                 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
                 <h2 class="py-3">Information</h2>
@@ -160,7 +163,6 @@
                             <input type="text" class="form-control" id="fn">
                             <div class="clear"></div>
                         </div>
-                    
                         <div class="col-md-6">
                             <label class="control-label" for="lastname">*Last Name:</label>
                             <input type="text" class="form-control" id="ln">
@@ -201,9 +203,9 @@
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-4">
-                            <label class="control-label" for="city">City:</label>
+                            <label class="control-label" for="city">Country:</label>
                             <div id="opt">
-                                    <select class="form-control" name="city" id="select">
+                                    <select class="form-control" name="city" id="city">
                                         
                                         <option value="1" id="op1" default>Canada</option>
                                         <option value="2" id="op2">USA</option>
@@ -222,7 +224,7 @@
                         <div class="col-md-4">
                             <label class="control-label" for="dotype">Donation type:</label>
                             <div id="opt">
-                                    <select class="form-control" name="dotype" id="select2">
+                                    <select class="form-control" name="dotype" id="dotype">
                             
                                         <option value="1" id="opt1" default>One-time</option>
                                         <option value="2" id="opt2">Monthly</option>
@@ -242,7 +244,7 @@
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-6">
-                            <label class="control-label" for="optionfordonation">Donate:</label>
+                            <label class="control-label" for="optionfordonation" id=>Donate:</label>
                             <div class="radio">
                             <label><input type="radio" name="optradio1" id="optradio1"> $50</label>
                             </div>
@@ -295,7 +297,7 @@
                             <div class="clear"></div>
 
                             <label class="control-label" for="exdate">Expire date:</label>              
-                            <input id="datepicker" onchange="checkDateofExpire()" class="form-control" type="date" data-date-format="yyyy-mm-dd" >
+                            <input id="datepicker" onchange="" class="form-control" type="date" data-date-format="yyyy-mm-dd" >
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -304,7 +306,7 @@
                 <!-- Submit button that needs to check validation before the action in onSubmit() -->
                 <div class="form-group">
                 <div class="bttn">
-                    <input id="submit" type="submit" class="btn btn-info" onclick="return (checkValidation())"> 
+                    <input id="submit" type="submit" class="btn btn-info" onclick="return (checkValidation() && store())"> 
                 </div>
                 <br>
                 

@@ -11,6 +11,11 @@
     box-sizing: border-box;
     font-family: myNewFont;
 }
+
+ul
+{
+    list-style-type: none;
+}
 body
 {
     color: #383838;
@@ -88,6 +93,30 @@ body{
     margin-left: 30px;
     float: right;
 }
+
+/* admin button */
+.adminButtonSection
+{
+    background-color: white;
+    margin: 30px 0;
+    padding: 40px;
+}
+.btn
+{   
+    background-color: DodgerBlue;
+    border: none; 
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer; 
+    float: right;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+  }
+
 /* header */
 header
 {
@@ -217,7 +246,8 @@ footer
 {   
     margin:20px 10px;
 }
-.canadahelps>h1
+
+.canadahelps >h1
 {
     padding:20px 20px;
     background-color:  rgb(254, 204, 30);
@@ -290,24 +320,24 @@ section > .bank >p
 
 
 
-.canadahelps >  img {
+/* .canadahelps >  img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 /*Event */
 .eventHead
 {
     color: rgb(254, 204, 30);
-     background-image: url("unnamed.jpg");
+     /* background-image: url("unnamed.jpg");
      width:900px; 
      height:300px; 
-     padding: 50px;
-     text-align: left;
-     vertical-align: middle;
+     padding: 50px; */
+    /* text-align: left;
+    vertical-align: middle;
     font-size: 100px;
-    font-weight: bold;
+    font-weight: lighter; */
     margin: 50px;
 }
 
@@ -339,7 +369,41 @@ section > .bank >p
     text-align: left;
     line-height: 2.25;
     font-size: 16px;
+
 }
+
+
+/* news box - by cuong */
+div#news > h2
+{
+    padding:20px 20px;
+    background-color:  rgb(254, 204, 30);
+    color: white;
+    font-weight: 1000;
+    margin: 30px 0;
+}
+
+.box{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+} 
+
+.box > .img-container
+{
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    align-items: center;
+}
+
+.clearFix
+{
+    clear: both;
+    content: "";
+    display: block;
+}
+
 
 .notes
 {
@@ -349,3 +413,96 @@ section > .bank >p
     text-align: left;
     background-color: rgb(254, 204, 30);
 }
+
+/* timetable for events */
+
+.ev > h1
+{
+    padding:20px 20px;
+    background-color:  rgb(254, 204, 30);
+    color: white;
+    font-weight: 1000;
+}
+
+.ev > p
+{
+    margin-left: 20px;
+    font-size: medium;
+}
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #2cdb72;
+    text-align: center;
+  }
+  
+  .month ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  .month .prev {
+    float: left;
+    padding-top: 10px;
+  }
+  
+  .month .next {
+    float: right;
+    padding-top: 10px;
+  }
+  
+  .weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+  }
+  
+  .weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+  }
+  
+  .days {
+    background: #eee;
+    margin: 10px;
+  }
+  
+  .days li {
+    list-style-type: none;
+    padding: 30px 10px;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;   
+    font-size:12px;
+    color: #777;
+  }
+  
+  .days li .active {
+    padding: 15px;
+    background: #2cdb72;
+    color: white !important
+  }
+  
+  /* Add media queries for smaller screens */
+  @media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+  }
+  
+  @media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+  }
+  
+  @media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+  }
