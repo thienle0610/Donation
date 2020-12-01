@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CQST Donation</title>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
-    <script src="login.js"></script>
+    <script defer src="printout.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -18,25 +18,21 @@
     <div class="container">
         <div class="content">
             <header>
-                <section class="adminButtonSection">
-                    <button onclick="window.location.href='login.html'" class="btn"><i class="fas fa-user"></i>&nbsp; Admin</button>
-                </section>
                 <div class="img-container">
-    
                     <img src="logo.png" style="border-radius: 50%" class="center"   alt="logo"/>
-    
                 </div>
                 <nav class="navbar navbar-inverse">
-                        <div class="container-fluid">
-                        <ul class="nav navbar-nav">
-                            <li><a href="DONATE.html" class="btn-danger">DONATE</a></li>
-                            <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
-                            <li><a href="news.html">News</a></li>
-                            <li><a href="event.html">Events</a></li>
-                            <li><a href="localdonations.html">Local Donations</a></li>
-                            <li><a href="aboutus.html">About Us</a></li>
-                        </ul>
-                        </div>
+                    <div class="container-fluid">
+                    <ul class="nav navbar-nav">
+                        <li><a href="DONATE.html" class="btn-danger">DONATE</a></li>
+                        <li><a href="home.html"><i class="fa fa-home"></i> Home</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="event.html">Events</a></li>
+                        <li><a href="localdonations.html">Local Donations</a></li>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a class="btn-primary" href="login.html"><i class="fas fa-user"></i>&nbsp; Admin Login</a></li>
+                    </ul>
+                    </div>
                 </nav>
             </header>
             <section class="adminHead">
@@ -44,15 +40,10 @@
             </section>
             <section class="formResult">
                 <h1 style="margin: 50px; padding: 50px;">Form Result</h1>
-                <div style="margin: 50px; padding: 50px; background-color: gray;" id="result"></div>
-                <a style="margin: 50px; padding: 50px;" href="login.html">Sign out</a>
-                <script>
-                    if (typeof(Storage) !== "undefined") {
-                            document.getElementById('result').innerHTML =" First Name: "+localStorage.getItem('fname')+"<br>"+" Last Name: "+localStorage.getItem('lname')+"<br> Phone Number: "+localStorage.getItem('phoneno')+"<br> Email: "+localStorage.getItem('email')+"<br> Address: "+localStorage.getItem('address')+"<br>Country: "+localStorage.getItem('city')+ "<br> State: "+localStorage.getItem('state')+"<br> Donate Type: "+localStorage.getItem('dotype')+"<br> Donate Option: "+localStorage.getItem('doopt')+"<br> Card Number: "+localStorage.getItem('card')+"<br> Expire Date: "+localStorage.getItem('datepicker')+"<br> CVC Number: "+localStorage.getItem('cvc');
-                            } else {
-                            document.getElementById('result').innerHTML = "Sorry, your browser does not support Web Storage...";
-                        }
-                </script>
+                <h2 style="margin: 0 50px; padding: 50px; background-color: grey; color: white;">Customer Information</h1>
+                <div style="margin: 50px; padding: 50px; background-color: gray;" id="result">
+                </div>
+                <p class ="signout"> <a href="login.html">Sign out</a></p>
             </section>
             <footer>
                 <p align=center>CQST &#8226; 243 Belde Drive, Charlotte NC 28F20 &#8226; 123-456-7890</p>
