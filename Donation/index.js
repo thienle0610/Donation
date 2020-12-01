@@ -1,37 +1,72 @@
 function store(){
 
-    var fname = document.getElementById('fn').value;
-    var lname = document.getElementById('ln').value;
-    var phoneno= document.getElementById('pn').value;
-    var email = document.getElementById('email').value;
-    var address = document.getElementById('address').value;
-    var city = document.getElementById('city').value;
-    var state = document.getElementById('state').value;
-    var dotype = document.getElementById('dotype').value;
-    var doopt = document.getElementById('doopt').value;
-    var card = document.getElementById('card').value;
-    var exdate = document.getElementById('exdate').value;
-    var cvc = document.getElementById('cvc').value;
-
-    if(fname.value.length == 0||lname.value.length == 0||email.value.length == 0||address.value.length == 0||city.value.length == 0||state.value.length == 0||dotype.value.length == 0||doopt.value.length == 0||card.value.length == 0||zip.value.length == 0||cvc.value.length == 0){
-        alert('Please fill in the information');
-
-    }else{
-        localStorage.setItem('fname', fname.value);
-        localStorage.setItem('lname', lname.value);
-        localStorage.setItem('phoneno', phoneno.value);
-        localStorage.setItem('email', email.value);
-        localStorage.setItem('address', address.value);
-        localStorage.setItem('city', city.value);
-        localStorage.setItem('state', state.value);
-        localStorage.setItem('dotype', dotype.value);
-        localStorage.setItem('doopt', doopt.value);
-        localStorage.setItem('card', card.value);
-        localStorage.setItem('exdate', exdate.value);
-        localStorage.setItem('cvc', cvc.value);
-        alert('Your donation is successful! Thank you!');
-        window.open("home.html");
+    var fname = document.getElementById('fn');
+    var lname = document.getElementById('ln');
+    var phoneno= document.getElementById('pn');
+    var email = document.getElementById('email');
+    var address = document.getElementById('address');
+    var city = document.getElementById('city');
+    var state = document.getElementById('state');
+    var dotype = document.getElementById('dotype');
+    var message = document.getElementById('note');
+    var typeOfCard;
+    if(document.getElementById('visa').checked===true)
+    {
+        typeOfCard =document.getElementById('visa').value;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
     }
+    if(document.getElementById('mastercard').checked===true)
+    {
+        typeOfCard =document.getElementById('mastercard').value;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+    }
+    if(document.getElementById('paypal').checked===true)
+    {
+        typeOfCard =document.getElementById('paypal').value;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    }
+
+    var money;
+        if(document.getElementById('optradio1').checked===true)
+        {
+            money = document.getElementById('optradio1').value;
+        }
+        if(document.getElementById('optradio2').checked===true)
+        {
+            money = document.getElementById('optradio2').value;
+        }
+        if(document.getElementById('optradio3').checked===true)
+        {
+            money = document.getElementById('optradio3').value;
+        }
+        if(document.getElementById('optradio4').checked===true)
+        {
+            money = document.getElementById('optradio4').value;
+        }
+        if(document.getElementById('optradio5').checked===true)
+        {
+            money = document.getElementById('optradio5').value;
+        }
+    var amount = document.getElementById('amount');
+    var card = document.getElementById('card');
+    var exdate = document.getElementById('datepicker');
+    var cvc = document.getElementById('cvc');
+    
+
+    localStorage.setItem('fname', fname.value);
+    localStorage.setItem('lname', lname.value);
+    localStorage.setItem('phoneno', phoneno.value);
+    localStorage.setItem('email', email.value);
+    localStorage.setItem('address', address.value);
+    localStorage.setItem('city', city.value);
+    localStorage.setItem('state', state.value);
+    localStorage.setItem('dotype', dotype.value);
+    localStorage.setItem('doopt', money);
+    localStorage.setItem('typeOfCard', typeOfCard);
+    localStorage.setItem('amount', amount.value);
+    localStorage.setItem('message', message.value);
+    localStorage.setItem('card', card.value);
+    localStorage.setItem('datepicker', exdate.value);
+    localStorage.setItem('cvc', cvc.value);    
 }
+
+
 
 

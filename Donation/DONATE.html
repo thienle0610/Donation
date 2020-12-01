@@ -142,6 +142,7 @@
                           <li><a href="event.html">Events</a></li>
                           <li><a href="localdonations.html">Local Donations</a></li>
                           <li><a href="aboutus.html">About Us</a></li>
+                          <li><a class="btn-primary" href="login.html"><i class="fas fa-user"></i>&nbsp; Admin Login</a></li>
                       </ul>
                       </div>
             </nav>
@@ -160,7 +161,6 @@
                             <input type="text" class="form-control" id="fn">
                             <div class="clear"></div>
                         </div>
-                    
                         <div class="col-md-6">
                             <label class="control-label" for="lastname">*Last Name:</label>
                             <input type="text" class="form-control" id="ln">
@@ -201,9 +201,9 @@
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-4">
-                            <label class="control-label" for="city">City:</label>
+                            <label class="control-label" for="city">Country:</label>
                             <div id="opt">
-                                    <select class="form-control" name="city" id="select">
+                                    <select class="form-control" name="city" id="city">
                                         
                                         <option value="1" id="op1" default>Canada</option>
                                         <option value="2" id="op2">USA</option>
@@ -222,8 +222,7 @@
                         <div class="col-md-4">
                             <label class="control-label" for="dotype">Donation type:</label>
                             <div id="opt">
-                                    <select class="form-control" name="dotype" id="select2">
-                            
+                                    <select class="form-control" name="dotype" id="dotype">
                                         <option value="1" id="opt1" default>One-time</option>
                                         <option value="2" id="opt2">Monthly</option>
                                     </select>
@@ -242,21 +241,21 @@
                 <div class="form-group">
                     <div class="form-row">
                         <div class="col-md-6">
-                            <label class="control-label" for="optionfordonation">Donate:</label>
+                            <label class="control-label" for="optionfordonation" id="doopt">Donate:</label>
                             <div class="radio">
-                            <label><input type="radio" name="optradio1" id="optradio1"> $50</label>
+                            <label><input type="radio" name="optradio" id="optradio1" value="$50"> $50</label>
                             </div>
                             <div class="radio">
-                            <label><input type="radio" name="optradio2" id="optradio2"> $100</label>
+                            <label><input type="radio" name="optradio" id="optradio2" value="$100"> $100</label>
                             </div>
                             <div class="radio">
-                            <label><input type="radio" name="optradio3" id="optradio3"> $150</label>
+                            <label><input type="radio" name="optradio" id="optradio3" value="$150"> $150</label>
                             </div>
                             <div class="radio">
-                            <label><input type="radio" name="optradio4" id="optradio4"> $200</label>
+                            <label><input type="radio" name="optradio" id="optradio4" value="$200"> $200</label>
                             </div>
                             <div class="radio">
-                            <label><input type="radio" name="optradio5" id="optradio5"> Other Amount:</label>
+                            <label><input type="radio" name="optradio" id="optradio5" value="Other Amount"> Other Amount:</label>
                             <div class="clear"></div>
                             <input type="number" id="amount" name="amount" style="max-width: 40;" placeholder="$" class="form-control"/>
                             </div>
@@ -274,15 +273,15 @@
 
                         <!-- Pay method contains card number, expire date and CVC -->
                         <div class="col-md-6">
-                            <label class="control-label" for="paymethod">Pay method: </label>              
+                            <label class="control-label" for="paymethod" id="paymethod">Pay method: </label>              
                             <div class="radio">
-                                <label><input type="radio" name="optra" id="visa"><i class="fab fa-cc-visa fa-2x"></i>  Visa</label>
+                                <label><input type="radio" name="optra" id="visa" value="Visa"><i class="fab fa-cc-visa fa-2x"></i>  Visa</label>
                                 </div>
                                 <div class="radio">
-                                <label><input type="radio" name="optra" id="mastercard"><i class="fab fa-cc-mastercard fa-2x"></i>  Mastercard</label>
+                                <label><input type="radio" name="optra" id="mastercard" value="Mastercard"><i class="fab fa-cc-mastercard fa-2x"></i>  Mastercard</label>
                                 </div>
                                 <div class="radio">
-                                <label><input type="radio" name="optra" id="paypal"><i class="fab fa-cc-paypal fa-2x"></i>  Paypal</label>
+                                <label><input type="radio" name="optra" id="paypal" value="Paypal"><i class="fab fa-cc-paypal fa-2x"></i>  Paypal</label>
                                 </div>
                             <div class="clear"></div>
                             
@@ -295,7 +294,7 @@
                             <div class="clear"></div>
 
                             <label class="control-label" for="exdate">Expire date:</label>              
-                            <input id="datepicker" onchange="checkDateofExpire()" class="form-control" type="date" data-date-format="yyyy-mm-dd" >
+                            <input id="datepicker" class="form-control" type="date" data-date-format="yyyy-mm-dd" >
                             <div class="clear"></div>
                         </div>
                     </div>

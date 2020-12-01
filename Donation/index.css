@@ -93,6 +93,8 @@ body{
     margin-left: 30px;
     float: right;
 }
+
+
 /* header */
 header
 {
@@ -107,7 +109,7 @@ header
 
 .navbar ul li
 {
-    margin: 3px 30px;
+    margin: 3px 20px;
 }
 
 .navbar ul li .btn-danger:hover
@@ -222,7 +224,8 @@ footer
 {   
     margin:20px 10px;
 }
-.canadahelps >h3
+
+.canadahelps >h1
 {
     padding:20px 20px;
     background-color:  rgb(254, 204, 30);
@@ -327,24 +330,10 @@ section > .bank >p
 
 
 
-/* .canadahelps >  img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
-
 /*Event */
 .eventHead
 {
     color: rgb(254, 204, 30);
-     /* background-image: url("unnamed.jpg");
-     width:900px; 
-     height:300px; 
-     padding: 50px; */
-    /* text-align: left;
-    vertical-align: middle;
-    font-size: 100px;
-    font-weight: lighter; */
     margin: 50px;
 }
 
@@ -498,6 +487,19 @@ div#news > h2
     padding: 15px;
     background: #2cdb72;
     color: white !important
+  }
+  /* signOut button */
+  .signout
+  {
+    background-color:rgb(254, 204, 30);
+    border-style: solid;
+    border-width: 5px;
+    border-color: whitesmoke;
+    font-weight: 1000;
+    text-align: center;
+    width: 30%;
+    margin: 50px auto;
+    padding: 30px;
   }
   
   /* Add media queries for smaller screens */
